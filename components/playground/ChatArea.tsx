@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useQueryClient, useMutation, useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { MaximizeIcon, SendIcon } from "@/components/icons";
@@ -32,6 +32,7 @@ const useMaximizedState = () => {
 const ChatArea = () => {
   const queryClient = useQueryClient();
   const inputRef = useRef<any>(null);
+  const messageEndRef = useRef<any>(null);
   const { isMaximized, toggleMaximized } = useMaximizedState(); // Use the custom hook
 
   // query selectedCoachingItem and try to extract default prompt from it
@@ -92,6 +93,12 @@ const ChatArea = () => {
     }
   };
 
+  useEffect(() => {
+    if (messageEndRef.current) {
+      messageEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [data, isFetching, isPending]);
+
   return (
     <div
       className={`bg-background border-r p-6 ${
@@ -124,6 +131,7 @@ const ChatArea = () => {
                   key="error"
                 />
               )}
+              <div ref={messageEndRef} />
             </div>
           </div>
           <div className="relative">

@@ -61,8 +61,7 @@ const tricks = [
 
 const TrickCards = () => {
   return (
-    // <div className="mx-auto grid grid-cols-1 gap-6 px-6 py-12 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-    <div className="mx-auto grid gap-6 px-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div className="text-white mx-auto grid grid-cols-1 gap-6 px-6 py-12 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {tricks.map((trick, index) => (
         <TrickItem
           key={index}
