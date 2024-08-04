@@ -42,6 +42,7 @@ import {
   ChartTooltip,
   ChartContainer,
 } from "@/components/ui/chart";
+import Image from "next/image";
 
 export function Assistant() {
   return (
@@ -286,7 +287,7 @@ export function Assistant() {
                   <div className="grid gap-4">
                     <div className="flex items-center gap-4">
                       <div className="relative w-20 h-20 overflow-hidden rounded-lg">
-                        <img
+                        <Image
                           src="/placeholder.svg"
                           alt="Frontside 180"
                           fill
@@ -307,7 +308,7 @@ export function Assistant() {
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="relative w-20 h-20 overflow-hidden rounded-lg">
-                        <img
+                        <Image
                           src="/placeholder.svg"
                           alt="Backside 360"
                           fill
@@ -328,7 +329,7 @@ export function Assistant() {
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="relative w-20 h-20 overflow-hidden rounded-lg">
-                        <img
+                        <Image
                           src="/placeholder.svg"
                           alt="Stalefish Grab"
                           fill

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Link from "next/link";
 
 import {
   AirplayIcon,
@@ -12,19 +11,11 @@ import {
   PodcastIcon,
   SignalIcon,
   SnowflakeIcon,
-  SunIcon,
   TargetIcon,
 } from "../icons";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Button } from "../ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import Image from "next/image";
 
 const TaskWizard: FC = () => {
   return (
@@ -38,7 +29,7 @@ const TaskWizard: FC = () => {
       <TabsContent value="welcome">
         <div className="mx-auto grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -57,7 +48,7 @@ const TaskWizard: FC = () => {
             </div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -76,7 +67,7 @@ const TaskWizard: FC = () => {
             </div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -95,7 +86,7 @@ const TaskWizard: FC = () => {
             </div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -114,7 +105,7 @@ const TaskWizard: FC = () => {
             </div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -133,7 +124,7 @@ const TaskWizard: FC = () => {
             </div>
           </div>
           <div className="group relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
