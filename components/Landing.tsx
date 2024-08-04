@@ -1,9 +1,19 @@
 "use client";
+import { useQueryClient } from "@tanstack/react-query";
 import Navbar from "./landing/Navbar";
 import TaskWizard from "./landing/TaskWizard";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const Landing = () => {
+  // use react query to clear chatMessages cache
+  const queryClient = useQueryClient();
+
+  // if chatMessages lets clear it
+  useEffect(() => {
+    queryClient.removeQueries({ queryKey: ["chatMessage"], exact: true });
+  }, []);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Navbar />

@@ -18,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import Image from "next/image";
 import TrickCards from "./trick-exploration/TrickCards";
 import CompetitionCards from "./competition-prep/CompetitionCards";
-import CoachingCards from "./coaching/CoachingCards";
+import ScoringCards from "./scoring/ScoringCards";
 import GoalsCards from "./goals/GoalsCards";
 
 const TaskWizard: FC = () => {
@@ -27,7 +27,7 @@ const TaskWizard: FC = () => {
       <TabsList className="sticky top-14 z-10 flex w-full bg-background px-4 lg:px-6">
         <TabsTrigger value="tricks">Trick Exploration</TabsTrigger>
         <TabsTrigger value="competition">Competition Prep</TabsTrigger>
-        <TabsTrigger value="coaching">Coaching</TabsTrigger>
+        <TabsTrigger value="scoring">Scoring</TabsTrigger>
         <TabsTrigger value="goals">Goals</TabsTrigger>
       </TabsList>
       <TabsContent value="tricks">
@@ -36,8 +36,8 @@ const TaskWizard: FC = () => {
       <TabsContent value="competition">
         <CompetitionCards />
       </TabsContent>
-      <TabsContent value="coaching">
-        <CoachingCards />
+      <TabsContent value="scoring">
+        <ScoringCards />
       </TabsContent>
       <TabsContent value="goals">
         <GoalsCards />

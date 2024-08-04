@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 
-const CoachingItem = ({ Icon, title, description, initialPrompt }: any) => {
+const ScoringItem = ({ Icon, title, description, initialPrompt }: any) => {
   const queryClient = useQueryClient();
 
   const handleClick = () => {
@@ -29,4 +29,4 @@ const CoachingItem = ({ Icon, title, description, initialPrompt }: any) => {
   );
 };
 
-export default CoachingItem;
+export default ScoringItem;
