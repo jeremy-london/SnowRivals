@@ -21,7 +21,7 @@ const Navbar: FC = () => {
         prefetch={false}
       >
         <MountainIcon className="h-6 w-6" />
-        <span className="text-black">SnowRival</span>
+        <span className="text-black">Snow Rivals</span>
       </Link>
 
       <div className="flex items-center gap-4">

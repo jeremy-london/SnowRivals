@@ -4,26 +4,19 @@ import TaskWizard from "./landing/TaskWizard";
 import Image from "next/image";
 
 const Landing = () => {
-  // const { data, isLoading, isError } = useQuery({
-  //   queryFn: async () => await getHealthCheck(),
-  //   queryKey: ["healthcheck"], //Array according to Documentation
-  // });
-
-  // if (isLoading) return <div>Loading...</div>;
-  // if (isError) return <div>Sorry There was an Error</div>;
-
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Navbar />
-      <div className="flex w-full md:w-1/2 my-0 mx-auto aspect-[500/300]">
+      <div className="flex flex-col items-center w-full md:w-1/2 my-0 mx-auto aspect-[500/300]">
         <Image
           src="/snow-rivals.png"
-          alt="SnowRival"
+          alt="SnowRivals Banner"
           width="0"
           height="0"
           sizes="100vw"
           className="w-full h-auto"
         />
+        <h1 className="text-4xl font-bold">Base Camp</h1>
       </div>
       <main className="flex-1">
         <TaskWizard />

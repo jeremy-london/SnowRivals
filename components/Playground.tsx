@@ -10,13 +10,19 @@ import { Button } from "@/components/ui/button";
 import { PlayIcon } from "@/components/icons";
 import Sidebar from "@/components/playground/Sidebar";
 import ChatArea from "@/components/playground/ChatArea";
+import Title from "./playground/sidebar/Title";
 
 const Playground = () => {
   // const { isMaximized } = useMaximizedState(); // Add this line to initialize the maximized state
   return (
     <div className="flex w-full h-screen">
-      <Sidebar />
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
       <div className="flex-1 flex flex-col h-full">
+        <div className="flex md:hidden items-center justify-between p-6 border-b">
+          <Title />
+        </div>
         <div className="flex-1 flex h-full">
           <ChatArea />
           <div className="flex-1 p-6 overflow-auto">
@@ -100,7 +106,7 @@ const Playground = () => {
                 <CardHeader>
                   <CardTitle>Trick Analysis</CardTitle>
                   <CardDescription>
-                    Video analysis of your latest trick attempt
+                    Video analysis of these trick attempts
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

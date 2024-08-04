@@ -2,52 +2,67 @@ import TrickItem from "./TrickItem";
 
 const tricks = [
   {
-    src: "/placeholder.svg",
-    alt: "Trick 1",
-    title: "Backside 360",
+    src: "/tricks/grab-1.avif",
+    alt: "Grabs",
+    title: "Grabs",
     initialPrompt:
-      "Can you explain what a Backside 360 is, how to do it, and provide some details about this trick?",
+      "Grabs involve holding the board while in the air. Can you explain how to perform an Indy grab, including tips for perfecting it?",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Trick 2",
-    title: "Frontside 180",
+    src: "/tricks/grab-2.avif",
+    alt: "Spins",
+    title: "Spins",
     initialPrompt:
-      "Can you explain what a Frontside 180 is, how to do it, and provide some details about this trick?",
+      "Spins are rotations in the air. Can you describe how to do a Backside 360, including the key techniques to master it?",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Trick 3",
-    title: "Ollie",
+    src: "/tricks/flip-1.avif",
+    alt: "Flips",
+    title: "Flips",
     initialPrompt:
-      "Can you explain what an Ollie is, how to do it, and provide some details about this trick?",
+      "Flips are head-over-heels rotations. Can you explain how to do a Backflip, including tips for landing it cleanly?",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Trick 4",
-    title: "Tail Press",
+    src: "/tricks/jump-1.avif",
+    alt: "Jumps",
+    title: "Jumps",
     initialPrompt:
-      "Can you explain what a Tail Press is, how to do it, and provide some details about this trick?",
+      "Jumps involve launching off the ground. Can you describe how to perform an Ollie, including the technique to get the most height?",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Trick 5",
-    title: "Nose Slide",
+    src: "/tricks/slide.avif",
+    alt: "Slides",
+    title: "Slides",
     initialPrompt:
-      "Can you explain what a Nose Slide is, how to do it, and provide some details about this trick?",
+      "Slides involve sliding the board along a surface. Can you explain how to do a Boardslide, including tips for balancing?",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Trick 6",
-    title: "Boardslide",
+    src: "/tricks/butter.avif",
+    alt: "Buttering",
+    title: "Buttering",
     initialPrompt:
-      "Can you explain what a Boardslide is, how to do it, and provide some details about this trick?",
+      "Buttering involves performing tricks on the snow surface. Can you describe how to do a Nose Butter, including tips for maintaining control?",
+  },
+  {
+    src: "/tricks/butter-2.avif",
+    alt: "Combos",
+    title: "Combos",
+    initialPrompt:
+      "Combos involve linking multiple tricks together in a sequence. Can you explain how to combine a 180 Spin with a Tail Grab, including tips for smoothly transitioning between tricks?",
+  },
+  {
+    src: "/tricks/handstand-1.avif",
+    alt: "Other",
+    title: "Other",
+    initialPrompt:
+      "This category includes unique tricks. Can you explain how to perform a custom trick of your choice, detailing the key steps and techniques?",
   },
 ];
 
 const TrickCards = () => {
   return (
-    <div className="mx-auto grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    // <div className="mx-auto grid grid-cols-1 gap-6 px-6 py-12 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div className="mx-auto grid gap-6 px-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {tricks.map((trick, index) => (
         <TrickItem
           key={index}
