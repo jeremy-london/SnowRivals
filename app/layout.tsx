@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ReactQueryProvider from "../lib/providers/ReactQueryProvider";
 import "./globals.css";
 
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
   title: "SnowRivals",
   description:
     "AI-powered tool for skiers and snowboarders that analyzes tricks, offers improvement feedback and aligns with competition judging criteria to help athletes achieve higher scores",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ReactQueryProvider>
           <main>{children}</main>
+          <ReactQueryDevtools initialIsOpen={false} />
         </ReactQueryProvider>
       </body>
     </html>

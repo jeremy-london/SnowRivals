@@ -17,11 +17,11 @@ const Navbar: FC = () => {
     <nav className="px-4 lg:px-6 h-14 flex items-center justify-between">
       <Link
         href="#"
-        className="flex items-center justify-center"
+        className="flex items-center gap-4 justify-center"
         prefetch={false}
       >
         <MountainIcon className="h-6 w-6" />
-        <span className="sr-only text-black">SnowRival</span>
+        <span className="text-black">SnowRival</span>
       </Link>
 
       <div className="flex items-center gap-4">
