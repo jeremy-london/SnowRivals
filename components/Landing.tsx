@@ -9,10 +9,10 @@ const Landing = () => {
   // use react query to clear chatMessages cache
   const queryClient = useQueryClient();
 
-  // if chatMessages lets clear it
+  // if chatMessages lets clear its
   useEffect(() => {
     queryClient.removeQueries({ queryKey: ["chatMessage"], exact: true });
-  }, []);
+  }, [queryClient]);
 
   return (
     <div className="flex flex-col min-h-dvh">
