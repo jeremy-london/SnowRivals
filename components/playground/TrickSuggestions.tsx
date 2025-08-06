@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { PackageX } from "lucide-react";
 
 const tricks = [
   {

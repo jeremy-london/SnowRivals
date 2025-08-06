@@ -13,6 +13,8 @@ const nextConfig = {
     unoptimized: true,
     formats: ["image/avif", "image/webp"],
   },
+  basePath: process.env.BASE_PATH || "",
+  trailingSlash: true,
 };
 
 export default nextConfig;

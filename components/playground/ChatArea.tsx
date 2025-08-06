@@ -15,6 +15,7 @@ const useMaximizedState = () => {
   // Initialize the maximized state
   const { data: isMaximized } = useQuery({
     queryKey,
+    queryFn: async () => false,
     initialData: false,
   });
 
@@ -38,6 +39,11 @@ const ChatArea = () => {
   // query selectedCoachingItem and try to extract default prompt from it
   const { data: coachingItem } = useQuery<any>({
     queryKey: ["selectedCoachingItem"],
+    queryFn: async () => {
+      // TODO: Replace with actual fetch logic for selectedCoachingItem
+      return null;
+    },
+    initialData: null,
   });
 
   const initialPrompt =

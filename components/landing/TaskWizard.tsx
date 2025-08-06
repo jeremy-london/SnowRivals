@@ -1,21 +1,6 @@
 import { FC } from "react";
 
-import {
-  AirplayIcon,
-  AwardIcon,
-  DiffIcon,
-  InfoIcon,
-  LandPlotIcon,
-  MountainIcon,
-  MountainSnowIcon,
-  PodcastIcon,
-  SignalIcon,
-  SnowflakeIcon,
-  TargetIcon,
-} from "../icons";
-import { Button } from "../ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import Image from "next/image";
 import TrickCards from "./trick-exploration/TrickCards";
 import CompetitionCards from "./competition-prep/CompetitionCards";
 import ScoringCards from "./scoring/ScoringCards";

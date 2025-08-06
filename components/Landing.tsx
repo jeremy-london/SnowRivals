@@ -15,9 +15,9 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-dvh">
       <Navbar />
-      <div className="flex flex-col items-center w-full md:w-1/2 my-0 mx-auto aspect-[500/300]">
+      <div className="flex flex-col items-center w-full md:w-1/2 my-0 mx-auto aspect-500/300">
         <Image
           src="/snow-rivals.png"
           alt="SnowRivals Banner"

@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MountainIcon, PlayIcon, SettingsIcon } from "@/components/icons";
+import { PlayIcon } from "@/components/icons";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Table,
@@ -16,7 +16,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import Link from "next/link";
 import ReturnHome from "./sidebar/ReturnHome";
 import Title from "./sidebar/Title";
 

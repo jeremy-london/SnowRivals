@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -7,15 +6,12 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PlayIcon } from "@/components/icons";
-import Sidebar from "@/components/playground/Sidebar";
 import ChatArea from "@/components/playground/ChatArea";
 import Title from "./playground/sidebar/Title";
 import ReturnHome from "./playground/sidebar/ReturnHome";
 import TrickSuggestions from "./playground/TrickSuggestions";
 
 import React from "react";
-import ReactPlayer from "react-player/youtube";
 import VideoPlayer from "./playground/VideoPlayer";
 
 const Playground = () => {
