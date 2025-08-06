@@ -1,5 +1,7 @@
 import TrickItem from "./TrickItem";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const tricks = [
   {
     src: "/tricks/grab-1.avif",
@@ -65,7 +67,7 @@ const TrickCards = () => {
       {tricks.map((trick, index) => (
         <TrickItem
           key={index}
-          src={trick.src}
+          src={basePath + trick.src}
           alt={trick.alt}
           title={trick.title}
           initialPrompt={trick.initialPrompt}

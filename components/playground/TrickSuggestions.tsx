@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const tricks = [
   {
     name: "Frontside 180",
@@ -33,12 +35,9 @@ const TrickSuggestions = () => {
     <div className="flex items-start flex-col gap-4">
       {tricks.map(({ imageUrl, videoUrl, description, difficulty, name }) => (
         <div key={name} className="flex flex-row items-center gap-4">
-          <div
-            key={name}
-            className="relative min-w-32 w-32 overflow-hidden rounded-lg"
-          >
+          <div className="relative min-w-32 w-32 overflow-hidden rounded-lg">
             <Image
-              src={imageUrl}
+              src={basePath + imageUrl}
               alt={name}
               width={128}
               height={128}

@@ -62,7 +62,7 @@ jobs:
         run: pnpm run build
         env:
           NEXT_PUBLIC_API_URL: https://jeremy-london.github.io/multimodal-ui/
-          BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
