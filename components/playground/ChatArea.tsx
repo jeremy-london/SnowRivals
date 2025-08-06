@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { postChatMessage } from "@/lib/api";
 import ChatBubble from "./ChatBubble";
 
-const useMaximizedState = () => {
+export const useMaximizedState = () => {
   const queryClient = useQueryClient();
   const queryKey = ["chatMaximized"];
 
@@ -108,7 +108,7 @@ const ChatArea = () => {
   return (
     <div
       className={`bg-background border-r p-6 ${
-        isMaximized ? "fixed inset-0 z-50 w-full h-full" : "w-6/12"
+        isMaximized ? "fixed inset-0 z-50 w-full h-full mt-20" : "w-6/12"
       } flex flex-col gap-4`}
     >
       <div className="flex items-center justify-between">
