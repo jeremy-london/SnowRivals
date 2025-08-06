@@ -12,6 +12,8 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Button } from "../ui/button";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const Navbar: FC = () => {
   return (
     <nav className="px-4 lg:px-6 h-14 flex items-center justify-between">
@@ -28,7 +30,10 @@ const Navbar: FC = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Avatar className="h-9 w-9">
-              <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
+              <AvatarImage
+                src={basePath + "/placeholder-user.jpg"}
+                alt="@shadcn"
+              />
               <AvatarFallback>JP</AvatarFallback>
               <span className="sr-only">Toggle user menu</span>
             </Avatar>

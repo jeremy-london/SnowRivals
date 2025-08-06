@@ -1,6 +1,8 @@
 import ReactMarkdown from "react-markdown";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const ChatBubble = ({ message }: any) => (
   <div
     className={`flex items-start gap-4 ${
@@ -9,7 +11,7 @@ const ChatBubble = ({ message }: any) => (
   >
     {message.role === "ai" && (
       <Avatar className="w-8 h-8">
-        <AvatarImage src="/placeholder-user.jpg" alt="AI Avatar" />
+        <AvatarImage src={basePath + "/placeholder-user.jpg"} alt="AI Avatar" />
         <AvatarFallback>AI</AvatarFallback>
       </Avatar>
     )}
@@ -24,7 +26,10 @@ const ChatBubble = ({ message }: any) => (
     </div>
     {message.role === "user" && (
       <Avatar className="w-8 h-8">
-        <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
+        <AvatarImage
+          src={basePath + "/placeholder-user.jpg"}
+          alt="User Avatar"
+        />
         <AvatarFallback>U</AvatarFallback>
       </Avatar>
     )}

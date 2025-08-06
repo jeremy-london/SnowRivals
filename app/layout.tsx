@@ -6,13 +6,15 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export const metadata: Metadata = {
   title: "SnowRivals",
   description:
     "AI-powered tool for skiers and snowboarders that analyzes tricks, offers improvement feedback and aligns with competition judging criteria to help athletes achieve higher scores",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: basePath + "/favicon.ico",
+    shortcut: basePath + "/favicon.ico",
   },
 };
 
