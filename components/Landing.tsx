@@ -5,6 +5,8 @@ import TaskWizard from "./landing/TaskWizard";
 import Image from "next/image";
 import { useEffect } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const Landing = () => {
   // use react query to clear chatMessages cache
   const queryClient = useQueryClient();
@@ -19,7 +21,7 @@ const Landing = () => {
       <Navbar />
       <div className="flex flex-col items-center w-full md:w-1/2 my-0 mx-auto aspect-500/300">
         <Image
-          src="/snow-rivals.png"
+          src={basePath + "/snow-rivals.png"}
           alt="SnowRivals Banner"
           width="0"
           height="0"
