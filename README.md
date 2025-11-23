@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Snow Rivals
+
+Snow Rivals is a modern snowboarding coach app designed to help riders of all levels improve their skills, track progress, and connect with coaches and fellow snowboarders.
+
+## Features
+
+- **Personalized Coaching:** Get tailored training plans and feedback from certified coaches.
+- **Skill Tracking:** Log your sessions, track your progress, and set goals.
+- **Video Analysis:** Upload and review your runs with frame-by-frame analysis.
+- **Community:** Join groups, share achievements, and connect with other riders.
+- **Event Scheduling:** Find and register for local snowboarding events and competitions.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jeremy-london/SnowRivals.git
+cd SnowRivals
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Run the development server:**
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables with dotenvx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project uses [`@dotenvx/dotenvx`](https://github.com/dotenvx/dotenvx) instead of `dotenv` for managing environment variables across multiple files and environments.
 
-## Deploy on Vercel
+### Supported File Layers (auto-detected by dotenvx)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+By default `dotenvx run` will merge (if present) in this order (later overrides earlier):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. `.env`
+2. `.env.local`
+3. `.env.development` (when running `pnpm dev`)
+4. `.env.development.local`
+
+You can add additional environment-specific files such as `.env.production` for builds.
+
+### Usage
+
+Scripts in `package.json` are prefixed with `dotenvx run --` so env loading is automatic:
+
+```bash
+pnpm dev      # loads dev env layers
+pnpm build    # loads production env layers (use .env.production*)
+pnpm start    # serves exported site with env already baked in
+```
+
+### Custom Command Example
+
+```bash
+dotenvx run -- node scripts/my-task.ts
+```
+
+### Adding New Variables
+
+1. Add to the appropriate `.env.*` file.
+2. Restart the script (`pnpm dev` etc.) so Next.js rebuilds with the new vars.
+3. Expose public values to the client by prefixing them with `NEXT_PUBLIC_`.
+
+### Checking Loaded Variables
+
+```bash
+dotenvx run -- npx envinfo
+```
+
+Or simply dump them:
+
+```bash
+dotenvx run -- node -e 'console.log(process.env.NEXT_PUBLIC_API_URL)'
+```
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).

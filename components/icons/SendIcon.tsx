@@ -1,21 +1,27 @@
-const SendIcon = (props: any) => {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m22 2-7 20-4-9-9-4Z" />
-      <path d="M22 2 11 13" />
-    </svg>
-  );
+import type React from "react";
+
+type IconProps = React.SVGProps<SVGSVGElement> & { title?: string };
+
+const SendIcon = (props: IconProps) => {
+	const { title, ...rest } = props;
+	return (
+		<svg
+			{...rest}
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		>
+			{title ? <title>{title}</title> : null}
+			<path d="m22 2-7 20-4-9-9-4Z" />
+			<path d="M22 2 11 13" />
+		</svg>
+	);
 };
 
 export default SendIcon;
