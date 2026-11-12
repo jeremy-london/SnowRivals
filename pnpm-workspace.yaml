@@ -1,6 +1,11 @@
 ignoredBuiltDependencies:
   - sharp
 
+overrides:
+  seroval: 1.6.11
+  source-map-js: 1.2.2
+  undici: 6.29.1
+
 minimumReleaseAgeExclude:
   - "@biomejs/biome@2.6.7"
   - "@biomejs/cli-android-arm64@2.6.7"
